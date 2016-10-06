@@ -14,7 +14,7 @@ class MyListTableViewController: UITableViewController {
     let baseUrl = "http://www.omdbapi.com/?s="
     var baseUrlPlusItem:String!
 
-    var todos = [Todo]()
+    var todos = [Movie]()
     
     
 
@@ -69,10 +69,15 @@ class MyListTableViewController: UITableViewController {
                     
                     
                     let title = item["Title"] as! String
+                    let imdbID = item["imdbID"] as! String
+                    let year = item["Year"] as! String
+                    let poster = item["Poster"] as! String
                     
-                    
-                    let todo = Todo()
+                    let todo = Movie()
                     todo.title = title
+                    todo.imdbID = imdbID
+                    todo.year = year
+                    todo.poster = poster
                     
                     
                     self.todos.append(todo)
@@ -142,7 +147,7 @@ class MyListTableViewController: UITableViewController {
     }
     */
 
-   /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -150,16 +155,16 @@ class MyListTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "toList" {
-            let controller = segue.destination as! MyListTableViewController
+        if segue.identifier == "toDetails" {
+            let controller = segue.destination as! MovieDetailsTableViewController
             
-            controller.apiUrl = apiUrl
-            controller.session = session
+            
             
             let selectedCell = tableView.indexPathForSelectedRow
-            let user = users[selectedCell!.row]
+            let selectedMovie = todos[selectedCell!.row]
             
-            controller.user = user    }
-    */
-
+            controller.selectedMovie = selectedMovie
+            
+        }
+    }
 }

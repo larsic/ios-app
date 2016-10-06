@@ -8,7 +8,13 @@
 
 import Foundation
 
-class Todo {
+class Movie {
     
-    var title = ""
+    var title:String!
+    var year:String!
+    var imdbID:String!
+    var plot:String!
+    var poster:String!
+    
+    
 }

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08E8FC9D1DA63AB900541102 /* MyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8FC9C1DA63AB900541102 /* MyListTableViewController.swift */; };
-		08E8FC9F1DA6522600541102 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8FC9E1DA6522600541102 /* Todo.swift */; };
+		08E8FC9F1DA6522600541102 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8FC9E1DA6522600541102 /* Movie.swift */; };
+		08E8FCA31DA67B1900541102 /* MovieDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8FCA21DA67B1900541102 /* MovieDetailsTableViewController.swift */; };
 		08F713BC1DA53892001F0943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F713BB1DA53892001F0943 /* AppDelegate.swift */; };
 		08F713BE1DA53892001F0943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F713BD1DA53892001F0943 /* ViewController.swift */; };
 		08F713C11DA53893001F0943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F713BF1DA53892001F0943 /* Main.storyboard */; };
@@ -21,7 +22,8 @@
 
 /* Begin PBXFileReference section */
 		08E8FC9C1DA63AB900541102 /* MyListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListTableViewController.swift; sourceTree = "<group>"; };
-		08E8FC9E1DA6522600541102 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		08E8FC9E1DA6522600541102 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		08E8FCA21DA67B1900541102 /* MovieDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsTableViewController.swift; sourceTree = "<group>"; };
 		08F713B81DA53892001F0943 /* MyMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F713BB1DA53892001F0943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08F713BD1DA53892001F0943 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +76,8 @@
 				08F713D41DA53B91001F0943 /* MyMoviesViewController.swift */,
 				08F713D61DA53BA5001F0943 /* SearchViewController.swift */,
 				08E8FC9C1DA63AB900541102 /* MyListTableViewController.swift */,
-				08E8FC9E1DA6522600541102 /* Todo.swift */,
+				08E8FC9E1DA6522600541102 /* Movie.swift */,
+				08E8FCA21DA67B1900541102 /* MovieDetailsTableViewController.swift */,
 			);
 			path = MyMovies;
 			sourceTree = "<group>";
@@ -151,11 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08E8FC9F1DA6522600541102 /* Todo.swift in Sources */,
+				08E8FC9F1DA6522600541102 /* Movie.swift in Sources */,
 				08F713D71DA53BA5001F0943 /* SearchViewController.swift in Sources */,
 				08F713BE1DA53892001F0943 /* ViewController.swift in Sources */,
 				08F713C41DA53893001F0943 /* MyMovies.xcdatamodeld in Sources */,
 				08E8FC9D1DA63AB900541102 /* MyListTableViewController.swift in Sources */,
+				08E8FCA31DA67B1900541102 /* MovieDetailsTableViewController.swift in Sources */,
 				08F713BC1DA53892001F0943 /* AppDelegate.swift in Sources */,
 				08F713D51DA53B91001F0943 /* MyMoviesViewController.swift in Sources */,
 			);
