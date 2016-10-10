@@ -60,7 +60,7 @@ class MovieDetailsTableViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func save(_ sender: Any) {
+    @IBAction func save(_ sender: UIBarButtonItem) {
         let aMovie = NSEntityDescription.insertNewObject(forEntityName: "ListOfMovies", into: context) as! ListOfMovies
         
         aMovie.title = selectedMovie.title
@@ -76,7 +76,10 @@ class MovieDetailsTableViewController: UIViewController {
         } catch let error {
             print(error)
         }
-        
+        if let navigationController = self.navigationController
+        {
+            navigationController.popViewController(animated: true)
+        }
     }
 
     private func returnPlot() {

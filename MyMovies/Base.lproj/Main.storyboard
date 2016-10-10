@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uw-Cr-zJh">
                                 <frame key="frameInset" minX="132" minY="343" width="93" height="30"/>
@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="1888.8" y="-207.34632683658174"/>
         </scene>
-        <!--Movie Details Table View Controller-->
+        <!--MovieDetails-->
         <scene sceneID="eCm-PB-Fnl">
             <objects>
-                <viewController id="DQ2-mI-bc4" customClass="MovieDetailsTableViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MovieDetails" id="DQ2-mI-bc4" customClass="MovieDetailsTableViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NGp-tI-jVr"/>
                         <viewControllerLayoutGuide type="bottom" id="N5d-x3-jXa"/>
@@ -122,18 +122,17 @@
                                 <frame key="frameInset" minX="16" minY="128" width="224" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTE-9A-ndM">
-                                <frame key="frameInset" minX="325" minY="81" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="save:" destination="DQ2-mI-bc4" eventType="touchUpInside" id="4Wv-2L-nis"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="kn8-Na-47W">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="L4S-YR-hOO">
+                            <connections>
+                                <action selector="save:" destination="DQ2-mI-bc4" id="OXG-Vc-7mP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="linkMovietitle" destination="1Re-V9-RPU" id="beN-Sg-dRG"/>
