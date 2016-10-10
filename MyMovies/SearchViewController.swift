@@ -36,9 +36,12 @@ class SearchViewController: UIViewController {
         if segue.identifier == "toList" {
             let controller = segue.destination as! MyListTableViewController
             
-            controller.item = searchIt.text
+            let search = searchIt.text
+            
+            let toArray = search?.replacingOccurrences(of: " ", with: "+")
             
             
+            controller.item = toArray
         }
     }
     
