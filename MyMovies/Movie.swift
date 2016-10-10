@@ -15,6 +15,7 @@ class Movie {
     var imdbID:String!
     var plot:String!
     var poster:String!
-    
+    var runtime:String!
+        
     
 }

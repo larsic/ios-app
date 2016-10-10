@@ -15,6 +15,7 @@ class MovieDetailsTableViewController: UIViewController {
     
     
     
+    @IBOutlet weak var linkRuntime: UILabel!
     @IBOutlet weak var linkPlot: UILabel!
     @IBOutlet weak var linkYear: UILabel!
     @IBOutlet weak var linkMovietitle: UILabel!
@@ -36,11 +37,14 @@ class MovieDetailsTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        if selectedMovie.poster != "N/A"{
         let url = URL(string: selectedMovie.poster)
         let data = try? Data(contentsOf: url!)
         linkPoster.image = UIImage(data: data!)
+        }
         
-        linkYear.text = selectedMovie.year
+        linkYear.text = "Released:   "+selectedMovie.year
         linkMovietitle.text = selectedMovie.title
         
         
@@ -72,7 +76,7 @@ class MovieDetailsTableViewController: UIViewController {
         
         do{
             try context.save()
-            dismiss(animated: true, completion: nil)
+            
         } catch let error {
             print(error)
         }
@@ -101,9 +105,11 @@ class MovieDetailsTableViewController: UIViewController {
                 
                     
                     let plot = todosJson["Plot"] as! String
+                    let runtime = todosJson["Runtime"] as! String
                     
 
                     self.selectedMovie.plot = plot
+                    self.selectedMovie.runtime = runtime
                     
                 
                     
@@ -111,6 +117,7 @@ class MovieDetailsTableViewController: UIViewController {
                 
                 DispatchQueue.main.async{
                     self.linkPlot.text = self.selectedMovie.plot
+                    self.linkRuntime.text = "Runtime:   "+self.selectedMovie.runtime
                 }
 
             } catch let error {
